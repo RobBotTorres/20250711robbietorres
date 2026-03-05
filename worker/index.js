@@ -37,8 +37,11 @@ export default {
 
             // Send email
             try {
+                const msgId = `<${Date.now()}.${Math.random().toString(36).slice(2)}@robbietorres.info>`;
                 const rawEmail = [
                     'MIME-Version: 1.0',
+                    `Message-ID: ${msgId}`,
+                    `Date: ${new Date().toUTCString()}`,
                     'From: hello@robbietorres.info',
                     'To: robbieetorres@gmail.com',
                     `Reply-To: ${email}`,
