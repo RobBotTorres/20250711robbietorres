@@ -1,0 +1,13 @@
+name = "robbietorres-contact"
+main = "index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "robbietorres-contact"
+database_id = "1e834715-507a-40d9-bc6c-aed2173c6052"
+
+[[send_email]]
+name = "SEND_EMAIL"
+destination_address = "robbieetorres@gmail.com"
