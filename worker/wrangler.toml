@@ -7,7 +7,3 @@ compatibility_flags = ["nodejs_compat"]
 binding = "DB"
 database_name = "robbietorres-contact"
 database_id = "1e834715-507a-40d9-bc6c-aed2173c6052"
-
-[[send_email]]
-name = "SEND_EMAIL"
-destination_address = "robbieetorres@gmail.com"

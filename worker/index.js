@@ -1,5 +1,3 @@
-import { EmailMessage } from 'cloudflare:email';
-
 const CORS_HEADERS = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -35,33 +33,28 @@ export default {
                 'INSERT INTO submissions (name, email, message) VALUES (?, ?, ?)'
             ).bind(name, email, message).run();
 
-            // Send email
+            // Send email via Brevo
             try {
-                const msgId = `<${Date.now()}.${Math.random().toString(36).slice(2)}@robbietorres.info>`;
-                const rawEmail = [
-                    'MIME-Version: 1.0',
-                    `Message-ID: ${msgId}`,
-                    `Date: ${new Date().toUTCString()}`,
-                    'From: hello@robbietorres.info',
-                    'To: robbieetorres@gmail.com',
-                    `Reply-To: ${email}`,
-                    `Subject: Portfolio Contact: ${name}`,
-                    'Content-Type: text/plain; charset=utf-8',
-                    '',
-                    `From: ${name} <${email}>`,
-                    '',
-                    message,
-                    '',
-                    '---',
-                    'Sent from robbietorres.info',
-                ].join('\r\n');
+                const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+                    method: 'POST',
+                    headers: {
+                        'api-key': env.BREVO_API_KEY,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        sender: { name: 'robbietorres.info', email: 'hello@robbietorres.info' },
+                        to: [{ email: 'robbieetorres@gmail.com', name: 'Robbie Torres' }],
+                        replyTo: { email, name },
+                        subject: `Portfolio Contact: ${name}`,
+                        textContent: `From: ${name} <${email}>\n\n${message}\n\n---\nSent from robbietorres.info`,
+                    }),
+                });
 
-                const msg = new EmailMessage(
-                    'hello@robbietorres.info',
-                    'robbieetorres@gmail.com',
-                    rawEmail
-                );
-                await env.SEND_EMAIL.send(msg);
+                if (!res.ok) {
+                    const err = await res.text();
+                    console.error('Brevo error:', err);
+                }
             } catch (emailErr) {
                 console.error('Email failed (submission saved):', emailErr);
             }
