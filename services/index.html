@@ -3,31 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robbie Torres — Technical Program Manager | Oakland, CA</title>
-    <meta name="description" content="Technical Program Manager with 10+ years bridging business and technical teams. Full-stack platform ops, data analytics, Cloudflare Workers, and cross-functional leadership. Oakland, CA.">
+    <title>Digital Services for Small Businesses — Robbie Torres | Oakland, CA</title>
+    <meta name="description" content="White-label digital services for Oakland small businesses. Web design, SEO, Google Ads, email marketing, hosting, and analytics from a technical leader with 10+ years experience.">
     <meta name="author" content="Robbie Torres">
-    <link rel="canonical" href="https://robbietorres.info/">
+    <link rel="canonical" href="https://robbietorres.info/services/">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Robbie Torres — Technical Program Manager">
-    <meta property="og:description" content="10+ years bridging business and technical teams. Full-stack platform ops, data analytics, and cross-functional leadership.">
+    <meta property="og:title" content="Digital Services for Small Businesses — Robbie Torres">
+    <meta property="og:description" content="White-label digital services for Oakland small businesses. Web design, SEO, Google Ads, email marketing, and more.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://robbietorres.info">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Robbie Torres",
-        "jobTitle": "Technical Program Manager",
-        "email": "hello@robbietorres.info",
-        "url": "https://robbietorres.info",
-        "address": { "@type": "PostalAddress", "addressLocality": "Oakland", "addressRegion": "CA" },
-        "sameAs": ["https://linkedin.com/in/robbietorres"],
-        "alumniOf": { "@type": "CollegeOrUniversity", "name": "California State Polytechnic University, Pomona" }
-    }
-    </script>
+    <meta property="og:url" content="https://robbietorres.info/services/">
     <style>
         body {
             font-family: 'IBM Plex Sans', sans-serif;
@@ -56,8 +43,8 @@
 
         h3 {
             font-size: 1rem;
-            font-weight: bold;
-            margin: 0 0 0.1rem;
+            font-weight: 600;
+            margin: 0 0 0.3rem;
         }
 
         p { margin: 0 0 1rem; }
@@ -94,19 +81,23 @@
 
         .meta { color: #999; font-size: 0.85rem; }
 
-        .entry { margin-bottom: 2rem; }
-        .entry h3 { margin-bottom: 0; }
-        .entry .role-meta {
-            color: #999;
-            font-size: 0.85rem;
-            margin: 0.15rem 0 0.5rem;
-        }
-        .entry p:last-child { margin-bottom: 0; }
+        .service-group { margin-bottom: 2rem; }
+        .service-group h3 { margin-bottom: 0.3rem; }
+        .service-group p { margin-bottom: 0; }
 
-        .skills {
+        .service-list {
             font-size: 0.9rem;
             color: #555;
-            line-height: 1.9;
+            margin: 0.3rem 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .service-list li {
+            padding: 0.2rem 0;
+        }
+        .service-list li::before {
+            content: "\2013\00a0";
+            color: #ccc;
         }
 
         label {
@@ -120,7 +111,7 @@
             padding: 0.45rem;
             margin-bottom: 1rem;
             border: 1px solid #ccc;
-            font-family: Georgia, 'Times New Roman', serif;
+            font-family: 'IBM Plex Sans', sans-serif;
             font-size: 0.95rem;
             background: #fff;
             box-sizing: border-box;
@@ -150,14 +141,6 @@
 
         .hp { position: absolute; left: -9999px; }
 
-        footer {
-            font-size: 0.85rem;
-            color: #999;
-        }
-        footer a { color: #999; }
-        footer a:visited { color: #999; }
-        footer a:hover { color: #222; }
-
         nav {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -177,6 +160,14 @@
         }
         nav a.brand:visited { color: #222; }
 
+        footer {
+            font-size: 0.85rem;
+            color: #999;
+        }
+        footer a { color: #999; }
+        footer a:visited { color: #999; }
+        footer a:hover { color: #222; }
+
         @media (max-width: 480px) {
             body { padding: 2rem 1rem; }
             h1 { font-size: 1.25rem; }
@@ -191,77 +182,89 @@
     </nav>
 
     <header>
-        <h1>Robbie Torres</h1>
-        <p class="tagline">Technical Program Manager &middot; Oakland, CA</p>
-        <p>I solve complex technical problems and help teams deliver better digital experiences. 10+ years bridging business and technical teams across e-commerce, platform ops, and data analytics.</p>
-        <a href="#contact" class="cta">Get in touch &rarr;</a>
+        <h1>Digital Services for Small Businesses</h1>
+        <p class="tagline">Oakland, CA</p>
+        <p>I help small businesses get online, get found, and get results. No jargon, no bloated retainers &mdash; just practical, hands-on work from someone who&rsquo;s been doing this for over a decade. White-label friendly for agencies and consultants.</p>
+        <a href="#contact" class="cta">Let&rsquo;s talk &rarr;</a>
     </header>
 
     <hr>
 
     <section>
-        <h2>About</h2>
-        <p>I build practical solutions that solve real problems. My scope has consistently spanned 2&ndash;3 separate roles: web development, platform/e-commerce operations, and data analytics.</p>
-        <p>Most recently, I built a custom Digital Asset Management platform on Cloudflare Workers &mdash; replacing $30K+/year commercial solutions at ~$600/year. I also helped lead a $20M e-commerce platform migration across 6 brands, built automated SEO monitoring dashboards, and managed everything from holiday campaign infrastructure to emergency production bug fixes.</p>
-        <p>I use AI tools daily as a development and workflow partner, from building production applications to analyzing platform data.</p>
+        <h2>What I Do</h2>
+
+        <div class="service-group">
+            <h3>Web Design &amp; Development</h3>
+            <p>Clean, fast, accessible websites that actually convert.</p>
+            <ul class="service-list">
+                <li>Website redesigns &amp; new builds</li>
+                <li>Landing pages for campaigns &amp; promotions</li>
+                <li>Hosting, maintenance &amp; ongoing support</li>
+                <li>Accessibility audits &amp; WCAG compliance</li>
+                <li>Mobile-responsive optimization</li>
+            </ul>
+        </div>
+
+        <div class="service-group">
+            <h3>Search &amp; Visibility</h3>
+            <p>Get found by the people who are already looking for you.</p>
+            <ul class="service-list">
+                <li>SEO strategy &amp; keyword optimization</li>
+                <li>Google Business Profile setup &amp; management</li>
+                <li>Google Ads campaign management</li>
+                <li>Local SEO for Oakland &amp; Bay Area businesses</li>
+                <li>Technical SEO &amp; site speed optimization</li>
+            </ul>
+        </div>
+
+        <div class="service-group">
+            <h3>Email &amp; Conversion</h3>
+            <p>Turn visitors into customers and customers into regulars.</p>
+            <ul class="service-list">
+                <li>Email marketing setup &amp; campaigns</li>
+                <li>A/B testing &amp; conversion optimization</li>
+                <li>Landing page optimization</li>
+                <li>Lead capture &amp; form strategy</li>
+            </ul>
+        </div>
+
+        <div class="service-group">
+            <h3>Analytics &amp; Reporting</h3>
+            <p>Know what&rsquo;s working, what&rsquo;s not, and what to do next.</p>
+            <ul class="service-list">
+                <li>Google Analytics 4 setup &amp; configuration</li>
+                <li>Custom Looker Studio dashboards</li>
+                <li>Performance tracking &amp; monthly reporting</li>
+                <li>Goal &amp; conversion tracking</li>
+            </ul>
+        </div>
+
+        <div class="service-group">
+            <h3>Strategy &amp; Implementation</h3>
+            <p>Big-picture thinking with hands-on execution.</p>
+            <ul class="service-list">
+                <li>Digital strategy &amp; technology audits</li>
+                <li>Platform selection &amp; migrations</li>
+                <li>Workflow optimization &amp; tool setup</li>
+                <li>Vendor coordination &amp; project management</li>
+            </ul>
+        </div>
     </section>
 
     <hr>
 
     <section>
-        <h2>Experience</h2>
-
-        <div class="entry">
-            <h3>Manager of Web Systems &amp; Development</h3>
-            <p class="role-meta">Adair Family Wines &middot; Jan 2024 &ndash; Mar 2026</p>
-            <p>Led web technology, e-commerce platforms, and digital infrastructure across 6 winery brands. Built a custom DAM platform on Cloudflare Workers ($30K+/yr &rarr; $600/yr). Designed multi-property health dashboard surfacing 1,800+ issues. Served on 4-person team leading $20M platform migration. Built Black Friday/Cyber Monday infrastructure supporting $245K+ in sales. Created unified GA4 analytics and identified $436K in shipments with no depletion visibility.</p>
-        </div>
-
-        <div class="entry">
-            <h3>Director of Web Development &amp; Programming</h3>
-            <p class="role-meta">Vintage Wine Estates &middot; 2022 &ndash; 2024</p>
-            <p>Directed technical operations for 30+ e-commerce websites. Reduced page load times by up to 80%. Led technical role in achieving over 100% annual revenue growth for five consecutive years. Managed 3+ developers and offshore contractors. Deployed Cloudflare security and WCAG accessibility standards.</p>
-        </div>
-
-        <div class="entry">
-            <h3>Senior Web Developer</h3>
-            <p class="role-meta">Vintage Wine Estates &middot; 2018 &ndash; 2022</p>
-            <p>Built custom wine club workflow achieving 300% YoY revenue increase within 24 hours of launch. Spearheaded mobile-responsive transition. Applied GA4 across 30+ sites for data-driven decision making.</p>
-        </div>
-
-        <div class="entry">
-            <h3>Web Content Manager</h3>
-            <p class="role-meta">Vintage Wine Estates &middot; 2013 &ndash; 2018</p>
-            <p>Established Asana as company-wide PM tool. Managed migration and redesign for 25+ e-commerce sites with responsive design and SEO best practices.</p>
-        </div>
-
-        <div class="entry">
-            <h3>Web Producer</h3>
-            <p class="role-meta">Spirit Clips (Hallmark Labs) &middot; 2012 &ndash; 2013</p>
-            <p>Managed content operations for digital film library platform. Cataloged 700+ film assets and streamlined content delivery with technology partners.</p>
-        </div>
-    </section>
-
-    <hr>
-
-    <section>
-        <h2>Skills</h2>
-        <p class="skills">Technical Program Management &middot; Cloudflare Workers/Pages/D1/R2 &middot; Platform Migrations &middot; GA4 &amp; Looker Studio &middot; JavaScript/React/Node.js &middot; Python &middot; PHP &middot; API Integration (REST, OAuth 2.0) &middot; Cross-Functional Leadership &middot; Vendor Management &middot; Technical SEO &middot; Accessibility (WCAG) &middot; Asana &middot; Git/GitHub Actions</p>
-    </section>
-
-    <hr>
-
-    <section>
-        <h2>Education</h2>
-        <p><strong>California State Polytechnic University, Pomona</strong><br>
-        Bachelor of Fine Arts, Graphic Design</p>
+        <h2>Why Work With Me</h2>
+        <p>I&rsquo;ve spent 10+ years managing web operations, building platforms, and driving revenue for companies with 30+ websites. Now I bring that same depth to small businesses that don&rsquo;t have (or need) a full-time technical team.</p>
+        <p>I&rsquo;m based in Oakland. I work directly with you &mdash; no account managers, no handoffs. I use AI tools daily to work faster and deliver more, which means you get enterprise-level thinking at small-business-friendly rates.</p>
+        <p>White-label services available for agencies and consultants who need reliable technical execution behind the scenes.</p>
     </section>
 
     <hr>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Interested in working together? Send me a message.</p>
+        <h2>Get Started</h2>
+        <p>Tell me about your business and what you need. I&rsquo;ll get back to you within a day.</p>
         <form id="contact-form">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
@@ -270,7 +273,7 @@
             <input type="email" id="email" name="email" required>
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your business and what you're looking for."></textarea>
 
             <div class="hp" aria-hidden="true">
                 <label for="website">Website</label>
