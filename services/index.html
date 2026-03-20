@@ -15,6 +15,83 @@
     <meta property="og:description" content="White-label digital services for Oakland small businesses. Web design, SEO, Google Ads, email marketing, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://robbietorres.info/services/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Robbie Torres — Digital Services",
+        "description": "White-label digital services for Oakland small businesses. Web design, SEO, Google Ads, email marketing, hosting, analytics, and strategic implementation.",
+        "url": "https://robbietorres.info/services/",
+        "telephone": "",
+        "email": "hello@robbietorres.info",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Oakland",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Oakland" },
+            { "@type": "State", "name": "California" },
+            { "@type": "GeoCircle", "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 37.8044, "longitude": -122.2712 }, "geoRadius": "50000" }
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Robbie Torres",
+            "url": "https://robbietorres.info"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Services",
+            "itemListElement": [
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Web Design & Development",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Redesigns & New Builds" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Pages" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Hosting & Maintenance" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Accessibility Audits & WCAG Compliance" } }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Search & Visibility",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Strategy & Keyword Optimization" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Business Profile Management" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads Campaign Management" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Local SEO for Oakland & Bay Area" } }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Email & Conversion",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email Marketing Campaigns" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "A/B Testing & Conversion Optimization" } }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Analytics & Reporting",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Analytics 4 Setup" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Looker Studio Dashboards" } }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Strategy & Implementation",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Strategy & Technology Audits" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Platform Migrations" } }
+                    ]
+                }
+            ]
+        }
+    }
+    </script>
     <style>
         body {
             font-family: 'IBM Plex Sans', sans-serif;
@@ -168,9 +245,42 @@
         footer a:visited { color: #999; }
         footer a:hover { color: #222; }
 
+        .portfolio-item {
+            margin-bottom: 2.5rem;
+        }
+        .portfolio-item img {
+            width: 100%;
+            border: 1px solid #ddd;
+            display: block;
+        }
+        .portfolio-item .caption {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .portfolio-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .portfolio-pair img {
+            width: 100%;
+            border: 1px solid #ddd;
+            display: block;
+        }
+        .portfolio-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #999;
+            margin-bottom: 0.3rem;
+        }
+
         @media (max-width: 480px) {
             body { padding: 2rem 1rem; }
             h1 { font-size: 1.25rem; }
+            .portfolio-pair { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -248,6 +358,45 @@
                 <li>Workflow optimization &amp; tool setup</li>
                 <li>Vendor coordination &amp; project management</li>
             </ul>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Recent Work</h2>
+
+        <div class="portfolio-item">
+            <h3>Website Redesign</h3>
+            <p>Full redesign for B.R. Cohn Winery &mdash; modern layout, improved navigation, mobile-responsive, faster load times.</p>
+            <div class="portfolio-pair">
+                <div>
+                    <div class="portfolio-label">Before</div>
+                    <img src="/assets/portfolio/brcohn-before.jpg" alt="B.R. Cohn Winery website before redesign" loading="lazy">
+                </div>
+                <div>
+                    <div class="portfolio-label">After</div>
+                    <img src="/assets/portfolio/brcohn-after.jpg" alt="B.R. Cohn Winery website after redesign" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <h3>Custom Platform Development</h3>
+            <p>Built a Digital Asset Management platform on Cloudflare Workers serving 7 winery brands &mdash; replacing $30K+/year commercial solutions at ~$600/year.</p>
+            <img src="/assets/portfolio/dam-platform.jpg" alt="Digital Asset Management platform showing trade assets portal for multiple winery brands" loading="lazy">
+        </div>
+
+        <div class="portfolio-item">
+            <h3>Analytics &amp; Reporting</h3>
+            <p>Custom analytics dashboard tracking downloads, unique users, and storage usage across all brands with exportable reports.</p>
+            <img src="/assets/portfolio/dam-analytics.jpg" alt="Analytics dashboard showing download metrics and usage tracking" loading="lazy">
+        </div>
+
+        <div class="portfolio-item">
+            <h3>Mobile-Responsive Design</h3>
+            <p>Every project is built mobile-first &mdash; clean layouts that work on any device.</p>
+            <img src="/assets/portfolio/mobile-responsive.jpg" alt="Mobile-responsive view of trade assets platform" loading="lazy" style="max-width: 280px;">
         </div>
     </section>
 
