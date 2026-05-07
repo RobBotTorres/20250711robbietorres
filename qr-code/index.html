@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code — Robbie Torres</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex">
+    <style>
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            line-height: 1.7;
+            color: #222;
+            background: #fefefe;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0 0 0.3rem;
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0 0 2rem;
+        }
+
+        .qr-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 2rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .qr-container img {
+            width: 280px;
+            height: 280px;
+            display: block;
+        }
+
+        .url {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 2rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .actions a {
+            display: inline-block;
+            padding: 0.5rem 1.4rem;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+            transition: background 0.15s;
+        }
+
+        .actions .primary {
+            color: #fefefe;
+            background: #222;
+        }
+        .actions .primary:visited { color: #fefefe; }
+        .actions .primary:hover { background: #555; color: #fefefe; }
+
+        .actions .secondary {
+            color: #222;
+            background: #fefefe;
+            border: 1px solid #222;
+        }
+        .actions .secondary:visited { color: #222; }
+        .actions .secondary:hover { background: #f0f0f0; }
+
+        @media (max-width: 480px) {
+            body { padding: 2rem 1rem; }
+            .qr-container img { width: 220px; height: 220px; }
+            .actions { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Robbie Torres</h1>
+    <p class="tagline">Scan to view my quick links</p>
+
+    <div class="qr-container">
+        <img src="/assets/qr-code.svg" alt="QR code linking to robbietorres.info/qr">
+    </div>
+
+    <p class="url">robbietorres.info/qr</p>
+
+    <div class="actions">
+        <a href="/assets/qr-code.svg" download="robbie-torres-qr.svg" class="primary">Download SVG</a>
+        <a href="/qr/" class="secondary">Preview landing page</a>
+    </div>
+
+</body>
+</html>

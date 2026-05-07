@@ -1,10 +1,10 @@
 # Robbie Torres
 
-> Technical Program Manager and digital services consultant based in Oakland, CA. 10+ years bridging business and technical teams across e-commerce, platform ops, and data analytics.
+> Technical Program Manager with 12+ years running production e-commerce platforms and six years managing a frontend engineering team across 30+ sites. AI-fluent builder who uses Claude daily as a working partner across code, analysis, and shipping internal tools. Based in Oakland, CA.
 
 ## About
 
-Robbie Torres is a Technical Program Manager based in Oakland, California. He has over 10 years of experience in web development, e-commerce platform operations, and data analytics. He has managed web operations for 30+ websites, led a $20M e-commerce platform migration, and built production applications on Cloudflare Workers.
+Robbie Torres is a Technical Program Manager based in Oakland, California. He has over 12 years of experience in e-commerce platform operations, web development, people management, and data analytics. He has managed web operations for 30+ websites, led a $20M e-commerce platform migration, built and led a frontend engineering team, and shipped production applications on Cloudflare Workers. He uses Claude daily as a working partner for code generation, debugging, data analysis, SQL, SOPs, and stakeholder communications.
 
 ## Digital Services
 
@@ -15,6 +15,16 @@ Robbie offers white-label digital services for small businesses in Oakland and t
 - Email & Conversion: email marketing, A/B testing, conversion optimization
 - Analytics & Reporting: Google Analytics 4 setup, Looker Studio dashboards, performance tracking
 - Strategy & Implementation: digital strategy, technology audits, platform migrations, vendor coordination
+
+## Selected Projects
+
+Personal projects shipped using Claude as a development partner:
+
+- RT Pottery (rtpottery.com): Live e-commerce site for ceramics business. React + Vite + Tailwind, Cloudflare Pages + Functions, D1, KV, R2.
+- Shelob Web (shelobweb.com): Multi-tenant website health monitoring SaaS with Stripe billing and Workers AI fix suggestions.
+- Trade Pourtal (tradepourtal.com): Multi-tenant SaaS for wine trade asset management with RBAC, JWT auth, and audit logging.
+- AI Job Search Agent: Job aggregation with AI scoring and cover letter generation using Workers AI.
+- In My Life: Self-hosted task and notification system with multi-channel escalation on Cloudflare Workers.
 
 ## Contact
 
@@ -28,7 +38,10 @@ Robbie offers white-label digital services for small businesses in Oakland and t
 
 - Built custom Digital Asset Management platform on Cloudflare Workers, replacing $30K+/year solutions at ~$600/year
 - Led $20M e-commerce platform migration across 6 brands
-- Directed technical operations for 30+ e-commerce websites
+- Directed technical operations for 30+ e-commerce websites with a frontend engineering team
+- Six years of people management: hiring, performance management, career development
 - Reduced page load times by up to 80%
-- Built Black Friday/Cyber Monday infrastructure supporting $245K+ in sales
+- Built Black Friday/Cyber Monday infrastructure supporting $245K+ in sales across 750+ orders
+- Ran A/B testing and CRO programs using Optimizely, VWO, Google Optimize, and Lucky Orange
+- Built unified GA4 and Looker Studio dashboards; identified $436K in transactions with no prior visibility
 - BFA in Graphic Design from Cal Poly Pomona
