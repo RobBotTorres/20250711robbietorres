@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://robbietorres.info/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://robbietorres.info/assets/og-image.png</image:loc>
+      <image:title>Robbie Torres — Technical Program Manager</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://robbietorres.info/services/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://robbietorres.info/assets/portfolio/dam-platform.jpg</image:loc>
+      <image:title>Digital Asset Management platform built on Cloudflare Workers</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://robbietorres.info/assets/portfolio/dam-analytics.jpg</image:loc>
+      <image:title>Custom analytics dashboard for asset downloads and usage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://robbietorres.info/assets/portfolio/brcohn-after.jpg</image:loc>
+      <image:title>B.R. Cohn Winery homepage after redesign</image:title>
+    </image:image>
   </url>
 </urlset>

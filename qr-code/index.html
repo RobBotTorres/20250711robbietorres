@@ -4,21 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code — Robbie Torres</title>
+    <meta name="description" content="Scannable QR code linking to robbietorres.info/qr.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#222222">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #fefefe;
+            --ink: #222222;
+            --muted: #6b6b6b;
+            --rule: #d6d6d6;
+            --focus: #1a5fb4;
+            --btn-bg: #222222;
+            --btn-ink: #fefefe;
+            --btn-hover: #4a4a4a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #16181c;
+                --ink: #e8e8e6;
+                --muted: #a6a6a2;
+                --rule: #3a3d43;
+                --focus: #9db8ff;
+                --btn-bg: #e8e8e6;
+                --btn-ink: #16181c;
+                --btn-hover: #bfbfbc;
+            }
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html { font-size: 100%; }
+
         body {
-            font-family: 'IBM Plex Sans', sans-serif;
-            max-width: 480px;
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            max-width: 30rem;
             margin: 0 auto;
             padding: 3rem 1.5rem;
             line-height: 1.7;
-            color: #222;
-            background: #fefefe;
+            color: var(--ink);
+            background: var(--bg);
             text-align: center;
+            -webkit-text-size-adjust: 100%;
         }
 
         h1 {
@@ -28,28 +61,29 @@
         }
 
         .tagline {
-            color: #666;
+            color: var(--muted);
             font-size: 0.9rem;
             margin: 0 0 2rem;
         }
 
+        /* The QR code always renders on white so scanners work in dark mode too. */
         .qr-container {
-            background: #fff;
-            border: 1px solid #ddd;
+            background: #ffffff;
+            border: 1px solid var(--rule);
             padding: 2rem;
             display: inline-block;
             margin-bottom: 1.5rem;
         }
 
         .qr-container img {
-            width: 280px;
-            height: 280px;
+            width: 17.5rem;
+            height: 17.5rem;
             display: block;
         }
 
         .url {
             font-size: 0.85rem;
-            color: #999;
+            color: var(--muted);
             margin-bottom: 2rem;
         }
 
@@ -57,55 +91,78 @@
             display: flex;
             gap: 1rem;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .actions a {
             display: inline-block;
-            padding: 0.5rem 1.4rem;
-            font-family: 'IBM Plex Sans', sans-serif;
+            padding: 0.65rem 1.4rem;
+            min-height: 2.75rem;
             font-size: 0.9rem;
             letter-spacing: 0.03em;
             text-decoration: none;
-            transition: background 0.15s;
         }
 
         .actions .primary {
-            color: #fefefe;
-            background: #222;
+            color: var(--btn-ink);
+            background: var(--btn-bg);
+            border: 1px solid var(--btn-bg);
         }
-        .actions .primary:visited { color: #fefefe; }
-        .actions .primary:hover { background: #555; color: #fefefe; }
+        .actions .primary:visited { color: var(--btn-ink); }
+        .actions .primary:hover { background: var(--btn-hover); border-color: var(--btn-hover); color: var(--btn-ink); }
 
         .actions .secondary {
-            color: #222;
-            background: #fefefe;
-            border: 1px solid #222;
+            color: var(--ink);
+            background: transparent;
+            border: 1px solid var(--ink);
         }
-        .actions .secondary:visited { color: #222; }
-        .actions .secondary:hover { background: #f0f0f0; }
+        .actions .secondary:visited { color: var(--ink); }
+        .actions .secondary:hover { background: var(--ink); color: var(--bg); }
 
-        @media (max-width: 480px) {
+        a:focus-visible {
+            outline: 3px solid var(--focus);
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+
+        @media (max-width: 30em) {
             body { padding: 2rem 1rem; }
-            .qr-container img { width: 220px; height: 220px; }
+            .qr-container { padding: 1.25rem; }
+            .qr-container img { width: 13.75rem; height: 13.75rem; }
             .actions { flex-direction: column; }
+        }
+
+        @media print {
+            body { color: #000; background: #fff; padding: 0; }
+            .actions, .url { display: none; }
+            .qr-container { border: none; }
         }
     </style>
 </head>
 <body>
 
-    <h1>Robbie Torres</h1>
-    <p class="tagline">Scan to view my quick links</p>
+    <main>
+        <h1>Robbie Torres</h1>
+        <p class="tagline">Scan to view my quick links</p>
 
-    <div class="qr-container">
-        <img src="/assets/qr-code.svg" alt="QR code linking to robbietorres.info/qr">
-    </div>
+        <div class="qr-container">
+            <img src="/assets/qr-code.svg" width="280" height="280" alt="QR code that opens robbietorres.info/qr, a page linking to my résumé, website, and services.">
+        </div>
 
-    <p class="url">robbietorres.info/qr</p>
+        <p class="url">robbietorres.info/qr</p>
 
-    <div class="actions">
-        <a href="/assets/qr-code.svg" download="robbie-torres-qr.svg" class="primary">Download SVG</a>
-        <a href="/qr/" class="secondary">Preview landing page</a>
-    </div>
+        <div class="actions">
+            <a href="/assets/qr-code.svg" download="robbie-torres-qr.svg" class="primary">Download SVG</a>
+            <a href="/qr/" class="secondary">Preview landing page</a>
+        </div>
+    </main>
 
 </body>
 </html>

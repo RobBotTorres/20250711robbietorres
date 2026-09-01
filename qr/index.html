@@ -5,31 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robbie Torres — Quick Links</title>
     <meta name="description" content="Download resume, visit website, or view services from Robbie Torres — Technical Program Manager in Oakland, CA.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#222222">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #fefefe;
+            --ink: #222222;
+            --muted: #6b6b6b;
+            --focus: #1a5fb4;
+            --btn-bg: #222222;
+            --btn-ink: #fefefe;
+            --btn-hover: #4a4a4a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #16181c;
+                --ink: #e8e8e6;
+                --muted: #a6a6a2;
+                --focus: #9db8ff;
+                --btn-bg: #e8e8e6;
+                --btn-ink: #16181c;
+                --btn-hover: #bfbfbc;
+            }
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html { font-size: 100%; }
+
         body {
-            font-family: 'IBM Plex Sans', sans-serif;
-            max-width: 400px;
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            max-width: 25rem;
             margin: 0 auto;
             padding: 3rem 1.5rem;
             line-height: 1.7;
-            color: #222;
-            background: #fefefe;
+            color: var(--ink);
+            background: var(--bg);
             text-align: center;
+            -webkit-text-size-adjust: 100%;
         }
 
         h1 {
             font-size: 2rem;
             font-weight: 600;
+            line-height: 1.25;
             margin: 0 0 0.1rem;
+            letter-spacing: -0.01em;
         }
 
         .tagline {
-            color: #666;
+            color: var(--muted);
             font-size: 0.95rem;
             margin: 0 0 2.5rem;
         }
@@ -42,45 +74,62 @@
 
         .links a {
             display: block;
-            padding: 0.75rem 1.4rem;
-            color: #fefefe;
-            background: #222;
+            padding: 0.85rem 1.4rem;
+            min-height: 2.75rem;
+            color: var(--btn-ink);
+            background: var(--btn-bg);
             text-decoration: none;
-            font-family: 'IBM Plex Sans', sans-serif;
             font-size: 1rem;
             letter-spacing: 0.03em;
-            transition: background 0.15s;
         }
-        .links a:visited { color: #fefefe; }
-        .links a:hover { background: #555; color: #fefefe; }
+        .links a:visited { color: var(--btn-ink); }
+        .links a:hover { background: var(--btn-hover); color: var(--btn-ink); }
+
+        a:focus-visible {
+            outline: 3px solid var(--focus);
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
 
         footer {
             margin-top: 3rem;
             font-size: 0.85rem;
-            color: #999;
+            color: var(--muted);
         }
-        footer a { color: #999; }
-        footer a:visited { color: #999; }
-        footer a:hover { color: #222; }
+        footer a { color: var(--muted); }
+        footer a:visited { color: var(--muted); }
+        footer a:hover { color: var(--ink); }
 
-        @media (max-width: 480px) {
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+
+        @media (max-width: 30em) {
             body { padding: 2rem 1rem; }
+            h1 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <h1>Robbie Torres</h1>
-    <p class="tagline">Technical Program Manager &middot; Oakland, CA</p>
+    <main>
+        <h1>Robbie Torres</h1>
+        <p class="tagline">Technical Program Manager &middot; Oakland, CA</p>
 
-    <div class="links">
-        <a href="/Robbie_Torres_Resume_2026.pdf">Download Resume</a>
-        <a href="/">View Website</a>
-        <a href="/services/">View Services</a>
-    </div>
+        <nav aria-label="Quick links">
+            <div class="links">
+                <a href="/Robbie_Torres_Resume_2026.pdf" type="application/pdf">Download Résumé (PDF)</a>
+                <a href="/">View Website</a>
+                <a href="/services/">View Services</a>
+            </div>
+        </nav>
+    </main>
 
     <footer>
-        <p><a href="https://linkedin.com/in/robbietorres" target="_blank" rel="noopener">LinkedIn</a></p>
+        <p><a href="https://linkedin.com/in/robbietorres" rel="me noopener">LinkedIn</a></p>
     </footer>
 
 </body>

@@ -1,30 +1,73 @@
 # Robbie Torres
 
-> Technical Program Manager with 12+ years running production e-commerce platforms and six years managing a frontend engineering team across 30+ sites. AI-fluent builder who uses Claude daily as a working partner across code, analysis, and shipping internal tools. Based in Oakland, CA.
+> Technical Program Manager with 12+ years running production e-commerce platforms and six years managing a frontend engineering team across 30+ sites. AI-fluent builder who uses Claude daily as a working partner across code, analysis, and shipping internal tools. Based in Oakland, California.
+
+Last updated: 2026-09-01
+
+## Quick facts
+
+- Name: Robbie Torres
+- Role: Technical Program Manager
+- Location: Oakland, California, United States
+- Experience: 12+ years in e-commerce platform operations and web development
+- Management: 6 years leading a frontend engineering team across 30+ production sites
+- Education: Bachelor of Fine Arts, Graphic Design — California State Polytechnic University, Pomona
+- Contact: hello@robbietorres.info
+- Website: https://robbietorres.info
 
 ## About
 
 Robbie Torres is a Technical Program Manager based in Oakland, California. He has over 12 years of experience in e-commerce platform operations, web development, people management, and data analytics. He has managed web operations for 30+ websites, led a $20M e-commerce platform migration, built and led a frontend engineering team, and shipped production applications on Cloudflare Workers. He uses Claude daily as a working partner for code generation, debugging, data analysis, SQL, SOPs, and stakeholder communications.
 
-## Digital Services
+His scope has consistently spanned four areas that are often separate roles: platform development, e-commerce operations, people management, and analytics/reporting.
 
-Robbie offers white-label digital services for small businesses in Oakland and the Bay Area:
+## Experience
 
-- Web Design & Development: website redesigns, landing pages, hosting, maintenance, accessibility (WCAG)
-- Search & Visibility: SEO, keyword optimization, Google Business Profile, Google Ads, local SEO
-- Email & Conversion: email marketing, A/B testing, conversion optimization
-- Analytics & Reporting: Google Analytics 4 setup, Looker Studio dashboards, performance tracking
-- Strategy & Implementation: digital strategy, technology audits, platform migrations, vendor coordination
+### Manager of Web Systems & Development — Adair Family Wines (2024–2026)
 
-## Selected Projects
+Led web technology, e-commerce platforms, data analytics, and digital infrastructure across 6 properties. Built a custom Digital Asset Management platform on Cloudflare Workers, replacing $30K+/year commercial solutions at roughly $600/year. Built a multi-property health dashboard surfacing 1,800+ issues. One of 4 leads on a $20M platform migration and built the only internal tracking system for it. Built Black Friday/Cyber Monday infrastructure supporting $245K+ in sales across 750+ orders. Built unified GA4 and Looker Studio dashboards, identifying $436K in transactions with no prior visibility across 13 partners. Managed 4+ external vendors as primary technical escalation contact.
+
+### Director of Web Dev & Programming — Vintage Wine Estates (2022–2024)
+
+Directed technical operations across 30+ production e-commerce websites with a team of 2 frontend developers, owning hiring, performance management, and career development. Reduced page load times by up to 80%. Contributed to over 100% annual revenue growth for five consecutive years through strategic platform improvements, in partnership with the CTO and marketing leadership. Promoted a direct report from Web Developer to Senior Frontend Developer. Led the technical wind-down and migration following the company's Chapter 11 proceedings. Led Salsify PIM onboarding and MikMak analytics rollout.
+
+### Senior Web Developer — Vintage Wine Estates (2018–2022)
+
+First management role at the company: built and led the frontend engineering team while continuing hands-on development across 20+ brand sites. Built a custom wine club checkout workflow on CORESense with co-written APIs, achieving a 300% year-over-year revenue increase within 24 hours of launch. Led Talkable referral program integration and launched a native loyalty program. Ran A/B testing and CRO programs using Optimizely, VWO, Google Optimize, and Lucky Orange. Wrote MySQL queries for ad-hoc reporting supporting wine club operations, marketing, and platform migrations.
+
+### Web Content Manager — Vintage Wine Estates (2013–2018)
+
+Established Asana as the project management tool company-wide. Onboarded and migrated 25+ newly acquired brand websites, integrating responsive design and SEO best practices. Built a QR code generator used company-wide as a marketing tool.
+
+### Web Producer — Spirit Clips, Hallmark Labs (2012–2013)
+
+Helped launch Zendesk for customer service. Managed content operations for a digital film library platform with 700+ assets. Collaborated with technology partners and assisted the CTO with SOPs.
+
+## Skills
+
+Technical Program Management, People Management, Platform Migrations, Vendor Management, Cross-Functional Coordination, A/B Testing & CRO, AI-Augmented Development (Claude, Workers AI + Llama 3.1, prompt engineering, LLM API integration), JavaScript, React, HTML/CSS, PHP, Cloudflare Workers/Pages/D1/R2, AWS, API integration (REST, OAuth 2.0), SQL, GA4, Looker Studio, Google Tag Manager, Optimizely, VWO, Asana, Jira, Figma, Adobe Creative Cloud, WordPress/WP Engine, CORESense, Technical SEO, WCAG accessibility, Git/GitHub Actions.
+
+## Selected projects
 
 Personal projects shipped using Claude as a development partner:
 
-- RT Pottery (rtpottery.com): Live e-commerce site for ceramics business. React + Vite + Tailwind, Cloudflare Pages + Functions, D1, KV, R2.
-- Shelob Web (shelobweb.com): Multi-tenant website health monitoring SaaS with Stripe billing and Workers AI fix suggestions.
-- Trade Pourtal (tradepourtal.com): Multi-tenant SaaS for wine trade asset management with RBAC, JWT auth, and audit logging.
-- AI Job Search Agent: Job aggregation with AI scoring and cover letter generation using Workers AI.
-- In My Life: Self-hosted task and notification system with multi-channel escalation on Cloudflare Workers.
+- RT Pottery (https://rtpottery.com): Live e-commerce site for a personal ceramics business sold at Oakland markets. PayPal checkout, admin panel, R2 image hosting, GA4. Stack: React + Vite + Tailwind, Cloudflare Pages + Functions, D1, KV, R2.
+- Shelob Web (https://shelobweb.com): Multi-tenant website health monitoring SaaS covering SEO, Core Web Vitals, accessibility, AI readiness, and broken links, with magic-link auth, RBAC, Stripe billing, and Google OAuth. Nightly Workers AI (Llama 3.1) fix suggestions.
+- Trade Pourtal (https://tradepourtal.com): Multi-tenant SaaS for wine trade asset management with subdomain and custom-domain branding, version control, RBAC, JWT auth, and audit logging.
+- AI Job Search Agent: Aggregates jobs from Remotive, Arbeitnow, Adzuna, and JSearch. AI scoring against a resume using Workers AI, cover letter generation, and application pipeline tracking.
+- In My Life: Self-hosted task and notification system with multi-channel escalation (email, SMS, push) on Cloudflare Workers.
+
+## Digital services
+
+Robbie offers digital services for small businesses in Oakland and the Bay Area, and white-label execution for agencies and consultants:
+
+- Web Design & Development: website redesigns, new builds, landing pages, hosting, maintenance, accessibility (WCAG)
+- Search & Visibility: SEO strategy, keyword optimization, Google Business Profile, Google Ads, local SEO, technical SEO
+- Email & Conversion: email marketing, A/B testing, conversion optimization, lead capture
+- Analytics & Reporting: Google Analytics 4 setup, Looker Studio dashboards, performance tracking, conversion tracking
+- Strategy & Implementation: digital strategy, technology audits, platform migrations, vendor coordination
+
+Engagement terms: fixed quote before work starts; ongoing work is month-to-month with no long-term contract; clients work with Robbie directly with no account managers; response within one business day.
 
 ## Contact
 
@@ -34,14 +77,7 @@ Personal projects shipped using Claude as a development partner:
 - LinkedIn: https://linkedin.com/in/robbietorres
 - Location: Oakland, CA
 
-## Experience Highlights
+## Pages
 
-- Built custom Digital Asset Management platform on Cloudflare Workers, replacing $30K+/year solutions at ~$600/year
-- Led $20M e-commerce platform migration across 6 brands
-- Directed technical operations for 30+ e-commerce websites with a frontend engineering team
-- Six years of people management: hiring, performance management, career development
-- Reduced page load times by up to 80%
-- Built Black Friday/Cyber Monday infrastructure supporting $245K+ in sales across 750+ orders
-- Ran A/B testing and CRO programs using Optimizely, VWO, Google Optimize, and Lucky Orange
-- Built unified GA4 and Looker Studio dashboards; identified $436K in transactions with no prior visibility
-- BFA in Graphic Design from Cal Poly Pomona
+- https://robbietorres.info/ — Résumé, experience, skills, selected projects, contact
+- https://robbietorres.info/services/ — Digital services, recent work, common questions, contact

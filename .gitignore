@@ -1,3 +1,12 @@
-.DS_Store
+# Reference ebook library — large, licensed material, not part of the site
+assets/all-library-products-epub-2025-12-09/
+
+# Source/working files
+*.xcf
+
+# Tooling
 .claude/
 .wrangler/
+
+# OS cruft
+.DS_Store
