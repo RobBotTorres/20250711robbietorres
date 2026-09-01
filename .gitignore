@@ -10,3 +10,5 @@ assets/all-library-products-epub-2025-12-09/
 
 # OS cruft
 .DS_Store
+
+dist/

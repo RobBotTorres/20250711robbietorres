@@ -1,0 +1,33 @@
+# Files in this directory that must NOT be published to the live site.
+# Cloudflare Pages does not read .gitignore, so this list is separate.
+
+# Reference ebook library (large, licensed)
+assets/all-library-products-epub-2025-12-09/
+
+# Internal business documents — not for public access
+assets/AFW_*
+
+# Personal working notes
+LinkedIn_Profile_Overhaul_UPDATED.md
+
+# Superseded resume
+Robbie Torres - Resume.pdf
+assets/*.pdf
+
+# Unreferenced media (screenshots, source files, demo video)
+assets/*.png
+!assets/og-image.png
+assets/*.mp4
+assets/portfolio/*.xcf
+Screenshot*.png
+
+# Tooling and OS cruft
+worker/
+wrangler.toml
+.assetsignore
+.gitignore
+.git/
+.wrangler/
+.claude/
+.DS_Store
+**/.DS_Store
