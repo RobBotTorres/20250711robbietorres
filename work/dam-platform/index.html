@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replacing a $30K Digital Asset Manager with $600 of Cloudflare — Robbie Torres</title>
+    <meta name="description" content="How I replaced a $30K+/year commercial digital asset management platform with a custom build on Cloudflare Workers costing roughly $600/year, serving trade partners across 7 winery brands.">
+    <meta name="author" content="Robbie Torres">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#222222">
+    <link rel="canonical" href="https://robbietorres.info/work/dam-platform/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — plain-text site summary">
+    <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <meta property="og:title" content="Replacing a $30K Digital Asset Manager with $600 of Cloudflare">
+    <meta property="og:description" content="How I replaced a $30K+/year commercial DAM with a custom build on Cloudflare Workers costing roughly $600/year.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://robbietorres.info/work/dam-platform/">
+    <meta property="og:site_name" content="Robbie Torres">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://robbietorres.info/assets/portfolio/dam-platform.jpg">
+    <meta property="article:author" content="Robbie Torres">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Replacing a $30K Digital Asset Manager with $600 of Cloudflare">
+    <meta name="twitter:description" content="How I replaced a $30K+/year commercial DAM with a custom build on Cloudflare Workers costing roughly $600/year.">
+    <meta name="twitter:image" content="https://robbietorres.info/assets/portfolio/dam-platform.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://robbietorres.info/work/dam-platform/#article",
+                "headline": "Replacing a $30K Digital Asset Manager with $600 of Cloudflare",
+                "description": "How a custom digital asset management platform built on Cloudflare Workers replaced a $30K+/year commercial product at roughly $600/year, serving trade partners across 7 winery brands.",
+                "url": "https://robbietorres.info/work/dam-platform/",
+                "image": "https://robbietorres.info/assets/portfolio/dam-platform.jpg",
+                "inLanguage": "en-US",
+                "isPartOf": { "@id": "https://robbietorres.info/#website" },
+                "author": { "@id": "https://robbietorres.info/#person" },
+                "publisher": { "@id": "https://robbietorres.info/#person" },
+                "mainEntityOfPage": "https://robbietorres.info/work/dam-platform/",
+                "datePublished": "2026-09-01",
+                "dateModified": "2026-09-01",
+                "articleSection": "Case study",
+                "keywords": "digital asset management, Cloudflare Workers, R2, D1, cost reduction, wine trade, platform engineering",
+                "about": [
+                    { "@type": "Thing", "name": "Digital asset management" },
+                    { "@type": "Thing", "name": "Cloudflare Workers" },
+                    { "@type": "Thing", "name": "Platform cost reduction" }
+                ],
+                "breadcrumb": { "@id": "https://robbietorres.info/work/dam-platform/#breadcrumb" }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://robbietorres.info/work/dam-platform/#breadcrumb",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://robbietorres.info/" },
+                    { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://robbietorres.info/work/dam-platform/" },
+                    { "@type": "ListItem", "position": 3, "name": "DAM platform", "item": "https://robbietorres.info/work/dam-platform/" }
+                ]
+            }
+        ]
+    }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            src: url('/assets/fonts/ibm-plex-sans-latin.woff2') format('woff2');
+            font-weight: 100 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            color-scheme: light dark;
+            --bg: #fefefe;
+            --ink: #222222;
+            --muted: #6b6b6b;
+            --rule: #d6d6d6;
+            --link: #2244aa;
+            --link-visited: #663399;
+            --link-hover: #0000cc;
+            --focus: #1a5fb4;
+            --btn-bg: #222222;
+            --btn-ink: #fefefe;
+            --btn-hover: #4a4a4a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #16181c;
+                --ink: #e8e8e6;
+                --muted: #a6a6a2;
+                --rule: #3a3d43;
+                --link: #9db8ff;
+                --link-visited: #cbaaf0;
+                --link-hover: #c2d3ff;
+                --focus: #9db8ff;
+                --btn-bg: #e8e8e6;
+                --btn-ink: #16181c;
+                --btn-hover: #bfbfbc;
+            }
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html { font-size: 100%; }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            max-width: 36rem;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            line-height: 1.7;
+            color: var(--ink);
+            background: var(--bg);
+            text-rendering: optimizeLegibility;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 1.22;
+            margin: 0 0 0.6rem;
+            letter-spacing: -0.012em;
+            text-wrap: balance;
+        }
+
+        h2 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--muted);
+            margin: 2.75rem 0 1rem;
+        }
+
+        h3 {
+            font-size: 1.02rem;
+            font-weight: 600;
+            margin: 1.9rem 0 0.4rem;
+            line-height: 1.4;
+        }
+
+        p { margin: 0 0 1rem; }
+
+        a { color: var(--link); }
+        a:visited { color: var(--link-visited); }
+        a:hover { color: var(--link-hover); }
+
+        a:focus-visible, [tabindex]:focus-visible {
+            outline: 3px solid var(--focus);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            padding: 0.6rem 1rem;
+            background: var(--btn-bg);
+            color: var(--btn-ink);
+            text-decoration: none;
+            z-index: 10;
+        }
+        .skip-link:visited { color: var(--btn-ink); }
+        .skip-link:focus { left: 0.5rem; top: 0.5rem; }
+
+        nav {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 3rem;
+        }
+        nav a {
+            display: inline-block;
+            color: var(--muted);
+            text-decoration: none;
+            margin-right: 1.5rem;
+            padding: 0.5rem 0;
+        }
+        nav a:visited { color: var(--muted); }
+        nav a:hover { color: var(--ink); text-decoration: underline; }
+        nav a.brand { color: var(--ink); font-weight: 600; }
+        nav a.brand:visited { color: var(--ink); }
+
+        .lede {
+            font-size: 1.06rem;
+            line-height: 1.62;
+            margin: 0 0 1.25rem;
+        }
+
+        .byline {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin: 0 0 2.25rem;
+        }
+
+        .keyfacts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule);
+            margin: 0 0 1rem;
+        }
+        .keyfacts div { background: var(--bg); padding: 0.9rem 1rem; }
+        .keyfacts dt {
+            font-size: 0.66rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 0 0 0.35rem;
+        }
+        .keyfacts dd {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.15;
+            font-variant-numeric: tabular-nums;
+        }
+        .keyfacts dd small {
+            display: block;
+            font-size: 0.74rem;
+            font-weight: 400;
+            color: var(--muted);
+            margin-top: 0.25rem;
+            letter-spacing: 0;
+        }
+
+        .stack {
+            list-style: none;
+            margin: 0.5rem 0 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+        .stack li {
+            padding: 0.5rem 0;
+            border-top: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 6.5rem 1fr;
+            gap: 0 1rem;
+        }
+        .stack li b { font-weight: 600; }
+
+        figure { margin: 1.75rem 0; }
+        figure img {
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--rule);
+            display: block;
+        }
+        figcaption {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+
+        .cta {
+            display: inline-block;
+            margin: 0.5rem 0 0;
+            padding: 0.65rem 1.4rem;
+            min-height: 2.75rem;
+            color: var(--btn-ink);
+            background: var(--btn-bg);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+        }
+        .cta:visited { color: var(--btn-ink); }
+        .cta:hover { background: var(--btn-hover); color: var(--btn-ink); }
+
+        footer {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        footer a { color: var(--muted); }
+        footer a:visited { color: var(--muted); }
+        footer a:hover { color: var(--ink); }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        @media (max-width: 30em) {
+            body { padding: 2rem 1rem; }
+            h1 { font-size: 1.4rem; }
+            .keyfacts { grid-template-columns: 1fr; }
+            .stack li { grid-template-columns: 1fr; gap: 0; }
+        }
+
+        @media print {
+            body { max-width: none; color: #000; background: #fff; padding: 0; }
+            nav, .skip-link, .cta, footer { display: none; }
+            a { color: #000; text-decoration: underline; }
+            figure { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <nav aria-label="Primary">
+        <a href="/" class="brand">RT</a>
+        <a href="/services/">Services</a>
+    </nav>
+
+    <main id="main">
+
+        <article>
+            <header>
+                <h1>Replacing a $30K Digital Asset Manager with $600 of Cloudflare</h1>
+                <p class="byline">Case study &middot; Adair Family Wines &middot; <time datetime="2026-09-01">2026</time></p>
+
+                <p class="lede">Seven winery brands needed one place for trade partners to download labels, bottle shots, and tech sheets. The commercial options quoted above $30,000 a year. I built it on Cloudflare Workers instead, and it runs for roughly $600.</p>
+            </header>
+
+            <dl class="keyfacts">
+                <div>
+                    <dt>Annual cost</dt>
+                    <dd>~$600<small>from $30,000+ quoted</small></dd>
+                </div>
+                <div>
+                    <dt>Brands served</dt>
+                    <dd>7<small>one portal each</small></dd>
+                </div>
+                <div>
+                    <dt>Downloads</dt>
+                    <dd>5,852<small>381 unique users</small></dd>
+                </div>
+            </dl>
+
+            <h2>The problem</h2>
+
+            <p>Distributors, retailers, and on-premise accounts constantly need brand assets: a high-resolution label for a shelf talker, a bottle shot for a menu, a tech sheet for a buyer meeting. At a seven-brand wine company, those requests all landed in the same place — the marketing and web team's inbox.</p>
+
+            <p>The existing process was email and shared drives. Someone would ask for the current Cabernet label, a person would go find it, and a 40MB file would go out as an attachment or a link that expired. Nobody could tell which version was current. Nobody could tell what had been downloaded, by whom, or whether a partner was still using artwork from two vintages ago.</p>
+
+            <p>The obvious fix is a digital asset management platform, and there are good commercial ones. The quotes came back above $30,000 a year. For a company where the entire web budget had to cover hosting, e-commerce, and a team, a five-figure line item for file storage with a login screen was not going to survive a budget review — and honestly, it shouldn't have.</p>
+
+            <h2>What I actually needed</h2>
+
+            <p>Working backwards from the requests we were already fielding, the real requirements were narrower than what the commercial products sell:</p>
+
+            <ul>
+                <li>A branded, public-facing portal per brand, so a distributor sees B.R. Cohn's assets under B.R. Cohn's identity rather than a generic vendor login.</li>
+                <li>Fast downloads of large files from anywhere, without the marketing team acting as a file server.</li>
+                <li>One current version of every asset, so there is no ambiguity about what is approved.</li>
+                <li>Enough analytics to answer "what are partners actually using?" — which turned out to be the question leadership cared about most.</li>
+            </ul>
+
+            <p>What I did <em>not</em> need was most of a commercial DAM: approval workflows, InDesign plugins, AI tagging, rights management for a media library we didn't have. The gap between what was for sale and what we needed was the whole argument for building it.</p>
+
+            <h2>How it's built</h2>
+
+            <p>The entire thing runs on Cloudflare's platform, which is what makes the economics work. There is no origin server, no VM, and nothing to patch.</p>
+
+            <ul class="stack">
+                <li><b>Workers</b> Application logic, routing, auth, and signed download URLs — running at the edge.</li>
+                <li><b>R2</b> Asset storage. No egress fees, which is the single most important line item when the product is people downloading large files.</li>
+                <li><b>D1</b> Asset metadata, brand configuration, users, and the download log.</li>
+                <li><b>KV</b> Session and configuration caching for reads that shouldn't touch the database.</li>
+                <li><b>Pages</b> The front end for each brand portal and the internal admin.</li>
+            </ul>
+
+            <p>R2 is the piece that decides the cost. Traditional object storage bills for egress, so a DAM — a product whose entire purpose is people downloading big files — is exactly the workload that makes those bills unpredictable. R2 charges for storage and operations but not egress, which turns a variable cost that scales with the thing you <em>want</em> to happen into a flat, forecastable one.</p>
+
+            <figure>
+                <picture>
+                    <source srcset="/assets/portfolio/dam-platform.avif" type="image/avif">
+                    <source srcset="/assets/portfolio/dam-platform.webp" type="image/webp">
+                    <img src="/assets/portfolio/dam-platform.jpg" width="960" height="472" alt="The trade assets portal showing a grid of winery brand cards, each with a logo and an asset count, above a filterable list of downloadable brand files." loading="lazy" decoding="async">
+                </picture>
+                <figcaption>The trade portal. Each brand gets its own entry point and its own visual identity.</figcaption>
+            </figure>
+
+            <h2>The part that mattered more than the savings</h2>
+
+            <p>The cost reduction is the headline, but the analytics turned out to be the more useful outcome.</p>
+
+            <p>Once every download was logged, we could answer questions the old process made impossible. Which brands do partners actually request assets for? Which SKUs get pulled before a selling season? Which accounts are active and which have gone quiet? Which assets has nobody touched in a year, so we can stop maintaining them?</p>
+
+            <figure>
+                <picture>
+                    <source srcset="/assets/portfolio/dam-analytics.avif" type="image/avif">
+                    <source srcset="/assets/portfolio/dam-analytics.webp" type="image/webp">
+                    <img src="/assets/portfolio/dam-analytics.jpg" width="960" height="468" alt="An analytics dashboard with summary tiles for total downloads and unique users, alongside tabs breaking activity down by asset, category, winery, and recent activity." loading="lazy" decoding="async">
+                </picture>
+                <figcaption>Downloads, unique users, and storage by brand, with exportable reports.</figcaption>
+            </figure>
+
+            <p>That reporting was not in the original brief. It became the feature people asked about, because it converted a support burden into a source of information about partner behaviour that the business did not previously have.</p>
+
+            <h2>What it cost, honestly</h2>
+
+            <p>The ~$600/year figure is infrastructure: Workers, R2 storage, D1, and the domain. It does not include my time to build it, and any comparison that ignores that is not a fair one.</p>
+
+            <p>The reason the trade still works is that the build was bounded. This is a well-understood problem — store files, serve files, log the serving — and the platform primitives do most of the heavy lifting. There was no novel infrastructure to design and nothing to keep running once it shipped. The maintenance cost since launch has been close to zero, which is the actual test of whether a build-versus-buy decision was correct.</p>
+
+            <p>I would give different advice for a different shape of problem. If we had needed approval chains, per-market rights, or deep creative-tool integration, the commercial products earn their price and I would have said so.</p>
+
+            <h2>Where it went next</h2>
+
+            <p>The pattern generalised. I later rebuilt it as <a href="https://tradepourtal.com">Trade Pourtal</a>, a multi-tenant version with custom-domain branding, role-based access control, version history, and audit logging — the same core idea, productised so it isn't tied to one company's brand list.</p>
+
+            <hr>
+
+            <p><strong>Working on something similar?</strong> If you're weighing a commercial platform against a focused build, I'm happy to talk through where the line actually falls.</p>
+            <a href="/services/#contact" class="cta">Get in touch &rarr;</a>
+        </article>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Robbie Torres &middot; <a href="/">Résumé</a> &middot; <a href="/services/">Services</a> &middot; <a href="https://linkedin.com/in/robbietorres" rel="me noopener">LinkedIn</a></p>
+    </footer>
+
+</body>
+</html>

@@ -67,7 +67,24 @@ Robbie offers digital services for small businesses in Oakland and the Bay Area,
 - Analytics & Reporting: Google Analytics 4 setup, Looker Studio dashboards, performance tracking, conversion tracking
 - Strategy & Implementation: digital strategy, technology audits, platform migrations, vendor coordination
 
-Engagement terms: fixed quote before work starts; ongoing work is month-to-month with no long-term contract; clients work with Robbie directly with no account managers; response within one business day.
+Engagement terms: a fixed number in writing before any work starts, with no hourly meter; ongoing work is month-to-month with no long-term contract; clients work with Robbie directly with no account managers; response within one business day.
+
+## Case study: replacing a $30K DAM with $600 of Cloudflare
+
+Full writeup: https://robbietorres.info/work/dam-platform/
+
+Seven winery brands needed one place for trade partners (distributors, retailers, on-premise accounts) to download labels, bottle shots, and tech sheets. Commercial digital asset management platforms quoted above $30,000 per year. Robbie built a custom platform on Cloudflare Workers instead, running at roughly $600 per year.
+
+Architecture: Cloudflare Workers for application logic, routing, auth, and signed download URLs; R2 for asset storage (no egress fees, which is the decisive cost factor for a download-heavy product); D1 for asset metadata, brand configuration, users, and the download log; KV for session and configuration caching; Pages for the per-brand front ends and internal admin.
+
+Results: 5,852 downloads by 381 unique users, one branded portal per brand, and download analytics that answered questions the previous email-and-shared-drive process could not — which brands and SKUs partners actually request, which accounts are active, and which assets are unused. The reporting was not in the original brief and became the most-requested feature. The pattern was later productised as Trade Pourtal (https://tradepourtal.com).
+
+## What colleagues say
+
+- Jessica Kogan, CEO of HSP Brands, who managed Robbie directly: "I worked with Robbie to grow the VWE direct-to-consumer division where he played the lead technical role in helping us achieve record growth from $25M to $110M in less than 3 years... Robbie is a dream technical leader and partner in driving efficiency and growth with your tech stack."
+- Terry Wheatley, Founder and Managing Partner of Connect the Dots: "Robbie's dedication, expertise, and exceptional performance led to his well-deserved promotions from Web Content Manager to Senior Web Developer and Director of Web Development and Programming."
+- Joe Gregg, Finance and IT Leader: "Someone who effortlessly bridged the gap between business requirements and technical implementation... he brought professionalism, grace and humor to every interaction."
+- Melissa Meyer, Brand Marketing & Ecommerce Professional: "He was always dependable, and was very good at understanding what we wanted the end result to look like to the user, and he would execute that in a timely manner."
 
 ## Contact
 
@@ -80,4 +97,5 @@ Engagement terms: fixed quote before work starts; ongoing work is month-to-month
 ## Pages
 
 - https://robbietorres.info/ — Résumé, experience, skills, selected projects, contact
-- https://robbietorres.info/services/ — Digital services, recent work, common questions, contact
+- https://robbietorres.info/services/ — Digital services, recent work, testimonials, common questions, contact
+- https://robbietorres.info/work/dam-platform/ — Case study: replacing a $30K digital asset manager with $600 of Cloudflare

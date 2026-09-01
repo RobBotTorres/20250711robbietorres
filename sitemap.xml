@@ -29,4 +29,14 @@
       <image:title>B.R. Cohn Winery homepage after redesign</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://robbietorres.info/work/dam-platform/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://robbietorres.info/assets/portfolio/dam-platform.jpg</image:loc>
+      <image:title>Trade assets portal built on Cloudflare Workers</image:title>
+    </image:image>
+  </url>
 </urlset>
