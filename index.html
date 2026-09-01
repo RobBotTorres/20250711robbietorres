@@ -439,14 +439,18 @@
             text-transform: uppercase;
             letter-spacing: 0.2em;
             margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
         nav a {
             display: inline-block;
             color: var(--muted);
             text-decoration: none;
-            margin-right: 1.5rem;
             padding: 0.5rem 0;
         }
+        /* brand pinned left, everything else pushed right */
+        nav .brand { margin-right: auto; }
         nav a:visited { color: var(--muted); }
         nav a:hover { color: var(--ink); text-decoration: underline; }
         nav a.brand {

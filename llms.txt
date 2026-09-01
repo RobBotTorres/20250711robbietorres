@@ -67,7 +67,7 @@ Robbie offers digital services for small businesses in Oakland and the Bay Area,
 - Analytics & Reporting: Google Analytics 4 setup, Looker Studio dashboards, performance tracking, conversion tracking
 - Strategy & Implementation: digital strategy, technology audits, platform migrations, vendor coordination
 
-Engagement terms: a fixed number in writing before any work starts, with no hourly meter; ongoing work is month-to-month with no long-term contract; clients work with Robbie directly with no account managers; response within one business day.
+Engagement terms: most projects start around $2,500; a fixed number in writing before any work starts, with no hourly meter; ongoing work is month-to-month with no long-term contract; clients work with Robbie directly with no account managers; response within one business day.
 
 ## Case study: replacing a $30K DAM with $600 of Cloudflare
 
