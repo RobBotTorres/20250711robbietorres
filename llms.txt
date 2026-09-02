@@ -1,71 +1,64 @@
 # Robbie Torres
 
-> Technical Program Manager with 12+ years running production e-commerce platforms and six years managing a frontend engineering team across 30+ sites. AI-fluent builder who uses Claude daily as a working partner across code, analysis, and shipping internal tools. Based in Oakland, California.
+> Twelve years running production e-commerce for multi-brand wine portfolios: platform migrations, site performance, analytics, and the teams that ship it. Based in Oakland, California.
 
-Last updated: 2026-09-01
+Last updated: 2026-09-02
 
 ## Quick facts
 
 - Name: Robbie Torres
-- Role: Technical Program Manager
+- Focus: E-commerce platforms and web systems
 - Location: Oakland, California, United States
 - Experience: 12+ years in e-commerce platform operations and web development
 - Management: 6 years leading a frontend engineering team across 30+ production sites
-- Education: Bachelor of Fine Arts, Graphic Design — California State Polytechnic University, Pomona
+- Education: Bachelor of Fine Arts, Graphic Design, California State Polytechnic University, Pomona
 - Contact: hello@robbietorres.info
 - Website: https://robbietorres.info
 
 ## About
 
-Robbie Torres is a Technical Program Manager based in Oakland, California. He has over 12 years of experience in e-commerce platform operations, web development, people management, and data analytics. He has managed web operations for 30+ websites, led a $20M e-commerce platform migration, built and led a frontend engineering team, and shipped production applications on Cloudflare Workers. He uses Claude daily as a working partner for code generation, debugging, data analysis, SQL, SOPs, and stakeholder communications.
-
-His scope has consistently spanned four areas that are often separate roles: platform development, e-commerce operations, people management, and analytics/reporting.
+Robbie Torres builds and operates e-commerce platforms and web systems, based in Oakland, California. His scope has consistently spanned platform development, e-commerce operations, people management, and analytics and reporting. He uses AI coding tools daily as part of how he builds and ships.
 
 ## Experience
 
-### Manager of Web Systems & Development — Adair Family Wines (2024–2026)
+### Manager of Web Systems and Development, Adair Family Wines (2024 to 2026)
 
-Led web technology, e-commerce platforms, data analytics, and digital infrastructure across 6 properties. Built a custom Digital Asset Management platform on Cloudflare Workers, replacing $30K+/year commercial solutions at roughly $600/year. Built a multi-property health dashboard surfacing 1,800+ issues. One of 4 leads on a $20M platform migration and built the only internal tracking system for it. Built Black Friday/Cyber Monday infrastructure supporting $245K+ in sales across 750+ orders. Built unified GA4 and Looker Studio dashboards, identifying $436K in transactions with no prior visibility across 13 partners. Managed 4+ external vendors as primary technical escalation contact.
+Owned web technology, e-commerce platforms, analytics, and digital infrastructure across a six-brand portfolio. Built a custom digital asset management platform on Cloudflare Workers, replacing commercial systems quoted above $30K per year with a build running around $600 per year. Built a multi-property site health dashboard surfacing performance and technical SEO issues that had no prior visibility. One of four leads on a $20M platform migration, and built the only internal decision matrix, cost comparison, and testing gap tracker. Stood up unified GA4 with cross-domain attribution plus Looker Studio dashboards used by marketing leadership. Primary technical escalation contact for four external vendors.
 
-### Director of Web Dev & Programming — Vintage Wine Estates (2022–2024)
+### Director of Web Development and Programming, Vintage Wine Estates (2013 to 2024)
 
-Directed technical operations across 30+ production e-commerce websites with a team of 2 frontend developers, owning hiring, performance management, and career development. Reduced page load times by up to 80%. Contributed to over 100% annual revenue growth for five consecutive years through strategic platform improvements, in partnership with the CTO and marketing leadership. Promoted a direct report from Web Developer to Senior Frontend Developer. Led the technical wind-down and migration following the company's Chapter 11 proceedings. Led Salsify PIM onboarding and MikMak analytics rollout.
+Progressed from Web Content Manager to Senior Web Developer to Director. Directed technical operations across roughly 30 e-commerce websites in an 11-brand portfolio, managing a team of two frontend developers plus contractors, including hiring, performance management, and career development. Reduced page load times by up to 80 percent. Built a custom wine club checkout workflow on CORESense with co-written APIs, producing a 300 percent year-over-year revenue increase within 24 hours of launch. Ran A/B testing and CRO programs using Optimizely and VWO. Established Asana as the company-wide project management tool. Led Salsify PIM onboarding and MikMak analytics rollout. Led the technical wind-down and migration following VWE's Chapter 11 proceedings.
 
-### Senior Web Developer — Vintage Wine Estates (2018–2022)
-
-First management role at the company: built and led the frontend engineering team while continuing hands-on development across 20+ brand sites. Built a custom wine club checkout workflow on CORESense with co-written APIs, achieving a 300% year-over-year revenue increase within 24 hours of launch. Led Talkable referral program integration and launched a native loyalty program. Ran A/B testing and CRO programs using Optimizely, VWO, Google Optimize, and Lucky Orange. Wrote MySQL queries for ad-hoc reporting supporting wine club operations, marketing, and platform migrations.
-
-### Web Content Manager — Vintage Wine Estates (2013–2018)
-
-Established Asana as the project management tool company-wide. Onboarded and migrated 25+ newly acquired brand websites, integrating responsive design and SEO best practices. Built a QR code generator used company-wide as a marketing tool.
-
-### Web Producer — Spirit Clips, Hallmark Labs (2012–2013)
+### Web Producer, Spirit Clips, Hallmark Labs (2012 to 2013)
 
 Helped launch Zendesk for customer service. Managed content operations for a digital film library platform with 700+ assets. Collaborated with technology partners and assisted the CTO with SOPs.
 
-## Skills
-
-Technical Program Management, People Management, Platform Migrations, Vendor Management, Cross-Functional Coordination, A/B Testing & CRO, AI-Augmented Development (Claude, Workers AI + Llama 3.1, prompt engineering, LLM API integration), JavaScript, React, HTML/CSS, PHP, Cloudflare Workers/Pages/D1/R2, AWS, API integration (REST, OAuth 2.0), SQL, GA4, Looker Studio, Google Tag Manager, Optimizely, VWO, Asana, Jira, Figma, Adobe Creative Cloud, WordPress/WP Engine, CORESense, Technical SEO, WCAG accessibility, Git/GitHub Actions.
-
 ## Selected projects
 
-Personal projects shipped using Claude as a development partner:
+Software Robbie has built and operates. All live.
 
-- RT Pottery (https://rtpottery.com): Live e-commerce site for a personal ceramics business sold at Oakland markets. PayPal checkout, admin panel, R2 image hosting, GA4. Stack: React + Vite + Tailwind, Cloudflare Pages + Functions, D1, KV, R2.
+- RT Pottery (https://rtpottery.com): Live e-commerce site for a personal ceramics business sold at Oakland markets. PayPal checkout, admin panel, R2 image hosting, GA4. Stack: React, Vite, Tailwind, Cloudflare Pages and Functions, D1, KV, R2.
 - Shelob Web (https://shelobweb.com): Multi-tenant website health monitoring SaaS covering SEO, Core Web Vitals, accessibility, AI readiness, and broken links, with magic-link auth, RBAC, Stripe billing, and Google OAuth. Nightly Workers AI (Llama 3.1) fix suggestions.
 - Trade Pourtal (https://tradepourtal.com): Multi-tenant SaaS for wine trade asset management with subdomain and custom-domain branding, version control, RBAC, JWT auth, and audit logging.
 - AI Job Search Agent: Aggregates jobs from Remotive, Arbeitnow, Adzuna, and JSearch. AI scoring against a resume using Workers AI, cover letter generation, and application pipeline tracking.
-- In My Life: Self-hosted task and notification system with multi-channel escalation (email, SMS, push) on Cloudflare Workers.
+- In My Life: Self-hosted task and notification system with multi-channel escalation via email, SMS, and push, on Cloudflare Workers.
+
+## Skills
+
+- Platform and commerce: WineDirect, Commerce7, CORESense, Shopify, WordPress and WP Engine, platform migrations
+- Build: JavaScript, React, HTML/CSS, PHP, SQL, Cloudflare Workers, Pages, D1 and R2, REST and OAuth 2.0 integrations, Git and GitHub Actions
+- Measurement: GA4, GTM, Looker Studio, technical SEO, A/B testing and CRO
+- Operating: People management, vendor management, cross-functional program coordination, Asana, Jira
 
 ## Digital services
 
 Robbie offers digital services for small businesses in Oakland and the Bay Area, and white-label execution for agencies and consultants:
 
-- Web Design & Development: website redesigns, new builds, landing pages, hosting, maintenance, accessibility (WCAG)
-- Search & Visibility: SEO strategy, keyword optimization, Google Business Profile, Google Ads, local SEO, technical SEO
-- Email & Conversion: email marketing, A/B testing, conversion optimization, lead capture
-- Analytics & Reporting: Google Analytics 4 setup, Looker Studio dashboards, performance tracking, conversion tracking
-- Strategy & Implementation: digital strategy, technology audits, platform migrations, vendor coordination
+- Web Design and Development: website redesigns, new builds, landing pages, hosting, maintenance, accessibility
+- Search and Visibility: SEO strategy, keyword optimization, Google Business Profile, Google Ads, local SEO, technical SEO
+- Email and Conversion: email marketing, A/B testing, conversion optimization, lead capture
+- Analytics and Reporting: Google Analytics 4 setup, Looker Studio dashboards, performance tracking, conversion tracking
+- Strategy and Implementation: digital strategy, technology audits, platform migrations, vendor coordination
 
 Engagement terms: most projects start around $2,500; a fixed number in writing before any work starts, with no hourly meter; ongoing work is month-to-month with no long-term contract; clients work with Robbie directly with no account managers; response within one business day.
 
@@ -77,14 +70,14 @@ Seven winery brands needed one place for trade partners (distributors, retailers
 
 Architecture: Cloudflare Workers for application logic, routing, auth, and signed download URLs; R2 for asset storage (no egress fees, which is the decisive cost factor for a download-heavy product); D1 for asset metadata, brand configuration, users, and the download log; KV for session and configuration caching; Pages for the per-brand front ends and internal admin.
 
-Results: 5,852 downloads by 381 unique users, one branded portal per brand, and download analytics that answered questions the previous email-and-shared-drive process could not — which brands and SKUs partners actually request, which accounts are active, and which assets are unused. The reporting was not in the original brief and became the most-requested feature. The pattern was later productised as Trade Pourtal (https://tradepourtal.com).
+Results: 5,852 downloads by 381 unique users, one branded portal per brand, and download analytics that answered questions the previous email-and-shared-drive process could not, including which brands and SKUs partners actually request, which accounts are active, and which assets are unused. The reporting was not in the original brief and became the most-requested feature. The pattern was later productised as Trade Pourtal (https://tradepourtal.com).
 
 ## What colleagues say
 
 - Jessica Kogan, CEO of HSP Brands, who managed Robbie directly: "I worked with Robbie to grow the VWE direct-to-consumer division where he played the lead technical role in helping us achieve record growth from $25M to $110M in less than 3 years... Robbie is a dream technical leader and partner in driving efficiency and growth with your tech stack."
 - Terry Wheatley, Founder and Managing Partner of Connect the Dots: "Robbie's dedication, expertise, and exceptional performance led to his well-deserved promotions from Web Content Manager to Senior Web Developer and Director of Web Development and Programming."
 - Joe Gregg, Finance and IT Leader: "Someone who effortlessly bridged the gap between business requirements and technical implementation... he brought professionalism, grace and humor to every interaction."
-- Melissa Meyer, Brand Marketing & Ecommerce Professional: "He was always dependable, and was very good at understanding what we wanted the end result to look like to the user, and he would execute that in a timely manner."
+- Melissa Meyer, Brand Marketing and Ecommerce Professional: "He was always dependable, and was very good at understanding what we wanted the end result to look like to the user, and he would execute that in a timely manner."
 
 ## Contact
 
@@ -96,6 +89,6 @@ Results: 5,852 downloads by 381 unique users, one branded portal per brand, and 
 
 ## Pages
 
-- https://robbietorres.info/ — Résumé, experience, skills, selected projects, contact
-- https://robbietorres.info/services/ — Digital services, recent work, testimonials, common questions, contact
-- https://robbietorres.info/work/dam-platform/ — Case study: replacing a $30K digital asset manager with $600 of Cloudflare
+- https://robbietorres.info/ Experience, selected projects, skills, contact
+- https://robbietorres.info/services/ Digital services, recent work, testimonials, common questions, contact
+- https://robbietorres.info/work/dam-platform/ Case study: replacing a $30K digital asset manager with $600 of Cloudflare
