@@ -7,9 +7,20 @@
     <meta name="description" content="Download resume, visit website, or view services from Robbie Torres — Technical Program Manager in Oakland, CA.">
     <meta name="robots" content="noindex, follow">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#222222">
+    <meta name="theme-color" content="#fefefe">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <script>
+        // Applied before first paint so the stored choice never flashes.
+        // Light is the default; dark only when explicitly chosen.
+        (function () {
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
     <style>
         /* Self-hosted variable font, latin subset (40KB).
            Same-origin and preloaded: no third-party DNS/TLS before first paint. */
@@ -22,7 +33,7 @@
         }
 
         :root {
-            color-scheme: light dark;
+            color-scheme: light;
             --bg: #fefefe;
             --ink: #222222;
             --muted: #6b6b6b;
@@ -32,16 +43,16 @@
             --btn-hover: #4a4a4a;
         }
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #16181c;
-                --ink: #e8e8e6;
-                --muted: #a6a6a2;
-                --focus: #9db8ff;
-                --btn-bg: #e8e8e6;
-                --btn-ink: #16181c;
-                --btn-hover: #bfbfbc;
-            }
+        /* Dark theme applies only when the user opts in. */
+        :root[data-theme="dark"] {
+            color-scheme: dark;
+            --bg: #16181c;
+            --ink: #e8e8e6;
+            --muted: #a6a6a2;
+            --focus: #9db8ff;
+            --btn-bg: #e8e8e6;
+            --btn-ink: #16181c;
+            --btn-hover: #bfbfbc;
         }
 
         *, *::before, *::after { box-sizing: border-box; }
