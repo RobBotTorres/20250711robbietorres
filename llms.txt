@@ -40,8 +40,6 @@ Software Robbie has built and operates. All live.
 - RT Pottery (https://rtpottery.com): Live e-commerce site for a personal ceramics business sold at Oakland markets. PayPal checkout, admin panel, R2 image hosting, GA4. Stack: React, Vite, Tailwind, Cloudflare Pages and Functions, D1, KV, R2.
 - Shelob Web (https://shelobweb.com): Multi-tenant website health monitoring SaaS covering SEO, Core Web Vitals, accessibility, AI readiness, and broken links, with magic-link auth, RBAC, Stripe billing, and Google OAuth. Nightly Workers AI (Llama 3.1) fix suggestions.
 - Trade Pourtal (https://tradepourtal.com): Multi-tenant SaaS for wine trade asset management with subdomain and custom-domain branding, version control, RBAC, JWT auth, and audit logging.
-- AI Job Search Agent: Aggregates jobs from Remotive, Arbeitnow, Adzuna, and JSearch. AI scoring against a resume using Workers AI, cover letter generation, and application pipeline tracking.
-- In My Life: Self-hosted task and notification system with multi-channel escalation via email, SMS, and push, on Cloudflare Workers.
 
 ## Skills
 
